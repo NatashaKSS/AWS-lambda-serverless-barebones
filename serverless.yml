@@ -1,0 +1,19 @@
+service: my-service-name    # NOTE: update this with your service name
+
+provider:
+  name: aws
+  runtime: nodejs8.10       # NOTE: Your preferred NodeJS version
+  stage: dev                # NOTE: Yes! You can specify different environments
+  region: ap-southeast-1    # NOTE: Your preferred region name
+
+functions:
+  hello:
+    name: Hello-World
+    description: Says hello world to everyone
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: get
+    memorySize: 256
+    timeout: 10
