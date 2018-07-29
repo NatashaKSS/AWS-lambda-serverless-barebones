@@ -16,13 +16,15 @@ Default output format [None]: json
 ```
 Note: Enter your preferred "default region name", for me, it's `ap-southeast-1`. Also, these credentials will be saved into your `~/.aws` folder.
 
-
+<br/>
+    
 #### Install the Serverless CLI
 Needs `>= Node v4`.
 ```
 npm install -g serverless
 ```
 
+<br/>
 
 #### Create a new service
 A service on Serverless is a collection of all your AWS Lambda functions, the
@@ -46,12 +48,16 @@ serverless deploy -v
 ```
 this deploys all changes to your Functions, Events or Resources in `serverless.yml`
 
+<br/>
+
 #### Deploying your function
 
 Deploy your function without re-deploying your service with
 ```
 serverless deploy function -f hello
 ```
+
+<br/>
 
 #### Logging
 
@@ -62,3 +68,4 @@ serverless invoke -f hello -l
 
 Alternatively, if you want to do this within your AWS Lambda Management Console,
 navigate to "Monitoring" > "View logs in CloudWatch" > Click on a log stream.
+
